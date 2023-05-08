@@ -30,7 +30,7 @@
       },
       "currency": {
         "type": "string",
-        "enum": ["RUV", "USD"]
+        "enum": ["RUB", "USD"]
       }
     }
   }
