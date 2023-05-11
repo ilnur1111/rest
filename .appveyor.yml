@@ -1,16 +1,11 @@
 
 image: Ubuntu  # образ для сборки
-
 stack: jdk 11  # версия JDK
-
 branches:
-  only:
-    - main  
+only:
+- main  
 build: off 
-  
-  - java -jar ./artifacts/app-mbank.jar &
-
+- java -jar ./artifacts/app-mbank.jar &
 build_script:
-
 - chmod +x gradlew
 - ./gradlew test --info  
