@@ -8,8 +8,8 @@ import org.junit.jupiter.api.Test;
 
 import static io.restassured.RestAssured.given;
 
-class MobileBankApiTestV6 {
-    private RequestSpecification requestSpec = new RequestSpecBuilder()
+class mobileBankApiTestV6 {
+    public RequestSpecification requestSpec = new RequestSpecBuilder()
         .setBaseUri("http://localhost")
         .setBasePath("/api/v1")
         .setPort(9999)
@@ -19,14 +19,14 @@ class MobileBankApiTestV6 {
         .build();
 
     @Test
-    void shouldReturnDemoAccounts() {
+   void shouldReturnDemoAccounts() {
       // Given - When - Then
       // Предусловия
       given()
           .spec(requestSpec) // со спецификацией проще (особенно когда много тестов)
       // Выполняемые действия
       .when()
-          .get("/demo/accounts")
+              .get("/demo/accounts")
       // Проверки
       .then()
           .statusCode(200);
